@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "paths": {
-      "@employee/*": ["./src/Employee/*"]
+      "@employee/*": ["./src/Employee/*"],
+      "@core/*": ["./src/core/*"]
     }
   }
 }
