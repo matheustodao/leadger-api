@@ -1,5 +1,5 @@
+import { UUID } from "@core/value-objects/uuid"
 import { EmployeeRole, type EnumEmployeeRoleType } from "@employee/domain/value-objects/employee-role"
-import { UUID } from "../../../core/value-objects/uuid"
 
 interface EmployeeProps {
   name: string
