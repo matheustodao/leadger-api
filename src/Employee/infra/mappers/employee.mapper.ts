@@ -1,5 +1,5 @@
-import { Employee as EmployeePrisma } from "@core/prisma/generated/prisma/client";
-import { Employee } from "@employee/domain/entities/employee";
+import { Employee as EmployeePrisma } from "@core/prisma/generated/prisma/client.js";
+import { Employee } from "@employee/domain/entities/employee.js";
 
 export class EmployeeMapper {
   static toPersistence(employee: Employee): EmployeePrisma {
