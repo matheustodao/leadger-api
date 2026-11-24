@@ -1,5 +1,4 @@
 import 'dotenv/config';
-import '@core/prisma/prisma.config'
 
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module.js';
@@ -28,7 +27,7 @@ function InitConfigDocApi() {
     onSetupDocApi: (app: INestApplication) => {
       const doc = SwaggerModule.createDocument(app, config)
       SwaggerModule.setup(
-        'docs/swagger',
+        '/docs/swagger',
         app,
         doc
       )
@@ -36,7 +35,7 @@ function InitConfigDocApi() {
       app.use(
         '/docs/scalar',
         apiReference({
-          url: '/openapi.json',
+          url: '/docs/swagger-json',
           darkMode: true,
           theme: 'deepSpace'
         }),
