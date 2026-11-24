@@ -1,5 +1,5 @@
-import { UUID } from "@core/value-objects/uuid"
-import { EmployeeRole, type EnumEmployeeRoleType } from "@employee/domain/value-objects/employee-role"
+import { UUID } from "@core/value-objects/uuid.js"
+import { EmployeeRole, type EnumEmployeeRoleType } from "@employee/domain/value-objects/employee-role.js"
 
 interface EmployeeProps {
   name: string
@@ -46,5 +46,17 @@ export class Employee {
       id: this.props.id.toString(),
       role: this.props.role.toString()
     }
+  }
+
+  getId(): string {
+    return this.props.id.toString()
+  }
+
+  getName(): string {
+    return this.props.name
+  }
+
+  getRole(): EnumEmployeeRoleType {
+    return this.props.role.toString()
   }
 }
